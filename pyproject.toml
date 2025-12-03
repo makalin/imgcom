@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imgcom"
+version = "1.0.0"
+description = "Professional Image Combiner & Stitcher CLI Tool"
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+license-files = ["LICENSE"]
+authors = [
+    {name = "Mehmet T. AKALIN", email = "info@dv.com.tr"}
+]
+keywords = ["image", "stitching", "panorama", "combine", "merge", "photos", "cli", "opencv", "computer-vision"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Multimedia :: Graphics :: Capture :: Digital Camera",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+]
+dependencies = [
+    "opencv-python>=4.5.0",
+    "numpy>=1.19.0",
+]
+[project.optional-dependencies]
+full = [
+    "Pillow>=8.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/makalin/imgcom"
+Documentation = "https://github.com/makalin/imgcom#readme"
+Repository = "https://github.com/makalin/imgcom"
+Issues = "https://github.com/makalin/imgcom/issues"
+
+[project.scripts]
+imgcom = "imgcom:main"
+
+[tool.setuptools]
+py-modules = ["imgcom"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.txt", "*.json"]
+

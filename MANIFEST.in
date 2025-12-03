@@ -1,0 +1,8 @@
+include README.md
+include LICENSE
+include requirements.txt
+include batch_config.example.json
+include pyproject.toml
+include setup.py
+recursive-include . *.py
+
